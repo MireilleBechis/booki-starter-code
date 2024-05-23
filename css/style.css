@@ -72,8 +72,67 @@ a {
 }
 
 /****** Hebergements ***********/
+/* carré gris */
 .hebergements {
     width: 65%;
+}
+/* div du titre */
+.hebergements-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* div de toutes les fiches */
+.hebergements-cards {
+    display: flex;
+    margin-top: 33px;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+/* div d'une fiche */
+}
+.hebergements-cards .card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 33px;
+    height: 250px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* image d'une fiche */
+.hebergements-cards img {
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* div des texte d'une fiche */
+.hebergements-cards .card-content {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+/* div du titre d'une fiche */
+.hebergements-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+/* div du sous-titre d'une fiche */
+.hebergements-cards .card-subtitle {
+    margin: 0;
+}
+
+/* div des étoiles d'une fiche */
+.hebergements-cards .card-rating {
+    margin-bottom: 5px;
 }
 
 /****** Populaires ***********/
