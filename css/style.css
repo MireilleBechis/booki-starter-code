@@ -13,9 +13,191 @@
     color: var(--main-color);
 }
 
+/* le header ne doit pas être dans le main */
+/* header */
 body {
+    margin: 0 auto;
+    max-width: 1440px;
+    min-width: 1025px;
+
+}
+header {
     display: flex;
+    width: 100%;
+    max-width: 1440px;
+    align-items: center;
+    padding: 0 50px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    height: 79px;
+}
+
+#logo-booki {
+width: 61px;
+height: 19px;
+padding-top: 10px;
+}
+
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    text-decoration: none;
+
+}
+
+nav a{
+    display:block;
+    border-top: solid 5px white;
+    padding-top: 20px;
+    margin: 20px 0 0 80px;
+    height: 79px;
+}
+
+nav a:hover{
+ border-top: #0065FC solid 5px;
+ margin-top: 20px;
+ padding-top: 20px;
+ height: 79px;
+ outline: 10px;
+}
+
+nav a:active{
+    border-top: #0065FC solid 5px;
+    margin-top: 20px;
+    padding-top: 20px;
+    height: 79px;
+    outline: 10px;
+   }
+
+/* selection */
+.selection {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    }
+
+.selection p {
+        margin-top: 5px;
+        font-weight:200;
+}
+       
+  
+h1 {
+    margin: 0;
+    font-size: 22px;
+    padding: 0;
+    }
+
+/* Localisation */
+.icone-location {
+    width: 50px;
+    height: 49px;
+    background-color: #f2f2f2;
+    border-radius: 15px 0px 0px 15px;
+    display: flex;  
     justify-content: center;
+    align-items: center;
+}
+.localisation {
+    display: flex;
+    margin: 10px 0px 30px 0px;
+}
+.fa-location-dot{
+    width: 14px;
+    height: 18px;
+    color: black;
+}
+form {
+ display: flex;
+}
+::placeholder{
+    font-size: 18px;
+    opacity: 100%;
+    font-weight:600;
+}
+
+input {
+    height: 49px;
+    width: 195px;
+    box-sizing: border-box;
+    text-align: center;
+    border: solid 1px #f2f2f2;
+    font-size: 18px;
+    font-weight:600;
+
+
+}
+
+.bouton-recherche {
+    background-color: #0065FC;
+    border-radius: 0px 15px 15px 0px;
+    display: flex;  
+    width: 132px;
+    color: white;
+    font-size: 18px;
+    font-weight:600;
+}
+
+.resultat-recherche {
+    display: flex;
+    padding: 25px 0 25px 0;
+    
+}
+
+.filtre-resultats {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    font-size: 18px;
+    font-weight: 800;
+    align-items: center;
+}
+.filtre-resultats p{
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight:600;
+
+}
+
+.type-filtre {
+    display: flex;
+    border: solid 2px #f2f2f2;
+    font-size: 18px;
+    font-weight: 800;
+    border-radius: 25px;
+    align-items: center;
+    padding: 20px;
+    height: 50px;
+    box-sizing: border-box;
+    background-color: white;
+    
+}
+
+.type-filtre i{
+    margin-right: 10px;
+
+}
+
+.type-filtre:active{
+    background-color:var(--filter-bg-color);
+} 
+
+.type-filtre:hover{
+    background-color:var(--filter-bg-color);
+} 
+
+.fa-info {
+    width: 25px;
+    height: 25px;
+    border: solid 1px #f2f2f2;
+    border-radius: 15px 15px 15px 15px;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
 }
 
 .main-container {
@@ -79,50 +261,58 @@ a {
 /* div du titre */
 .hebergements-title {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content:space-between;
 }
 /* div de toutes les fiches */
 .hebergements-cards {
     display: flex;
-    margin-top: 33px;
     flex-wrap: wrap;
-    width: 100%;
-    align-items: center;
     justify-content: space-between;
 
 /* div d'une fiche */
+
 }
+
+.hebergements-cards a {
+    display: block;
+    width: 31%;
+    height: 220px;
+    padding-top: 20px;
+}
+
 .hebergements-cards .card {
     display: flex;
     flex-direction: column;
-    margin-top: 33px;
-    height: 250px;
-    justify-content: space-between;
+    height: 220px;
     width: 100%;
+    box-sizing: border-box;
+
+
 }
 
 /* image d'une fiche */
 .hebergements-cards img {
-    height: 136px;
+    height: 124px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
 /* div des texte d'une fiche */
 .hebergements-cards .card-content {
-    width: 67%;
-    padding-left: 15px;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
+    padding-top: 0;
+    margin-top: 5px;
+    margin-left: 5px;
 }
 
 /* div du titre d'une fiche */
 .hebergements-cards .card-title {
-    margin-top: 10px;
-    margin-bottom: 4px;
+    margin: 0px;
 }
 
 /* div du sous-titre d'une fiche */
@@ -137,9 +327,15 @@ a {
 
 /****** Populaires ***********/
 .populaires {
+    display: flex;
     width: 32%;
+    height: auto;
+    flex-direction: column;
 }
 
+.populaires a{
+    display: block;
+}
 .populaires-title {
     display: flex;
     justify-content: space-between;
@@ -180,9 +376,78 @@ a {
     margin-bottom: 5px;
 }
 
+h3 {
+    margin-top: 30px;
+    margin-bottom: 4px;
+}
 
+/****** activité ***********/
+.activite {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 60px 30px 60px 30px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+.activite h2 {
+    width: 100%;
+}
+.activite-cards a{
+    padding-top: 30px;
+    display: block;
+    box-sizing: border-box;
+    height: 439px;
+    justify-content: space-between;
+}
 
+.activite-cards {
+    display: flex;
+    box-sizing: border-box;
+    height: 439px;
+    justify-content: space-between;
+}
 
+.activite-cards img {
+    object-fit: cover;
+    width: 297.5px;
+    height: 380px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 0;
+}
+
+.card-activite {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 15px #F2F2F2;
+    width: 297.5px;
+    height: 439px;
+    border-radius: 20px;
+}
+.activite h3 {
+    padding: 20px;
+    margin-top: 0;
+}
+
+footer {
+    display: flex;
+    background-color:#F2F2F2;
+    padding-top: 0px;
+    margin-top: 20px;
+}
+
+.footer-info{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 200px;
+    margin-bottom: 30px;
+}
+
+.footer-info a{
+    margin-top: 15px;
+}
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
