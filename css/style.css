@@ -23,7 +23,6 @@ body {
 }
 header {
     display: flex;
-    width: 100%;
     max-width: 1440px;
     align-items: center;
     padding: 0 50px;
@@ -148,12 +147,11 @@ input {
 
 .filtre-resultats {
     display:flex;
-    justify-content: space-between;
     align-items: center;
-    width: 60%;
     font-size: 18px;
     font-weight: 800;
     align-items: center;
+    gap: 15px;
 }
 .filtre-resultats p{
     margin-top: 15px;
@@ -382,35 +380,39 @@ h3 {
 }
 
 /****** activité ***********/
+
 .activite {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 60px 30px 60px 30px;
+    padding: 60px;
     box-sizing: border-box;
     flex-wrap: wrap;
 }
+
 .activite h2 {
     width: 100%;
 }
-.activite-cards a{
+
+.contenaire-activite { 
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: auto;
+    gap: 20px;
+
+}
+
+.contenaire-activite a{
     padding-top: 30px;
     display: block;
     box-sizing: border-box;
-    height: 439px;
+    width:calc(25% - 20px);
     justify-content: space-between;
 }
 
-.activite-cards {
-    display: flex;
-    box-sizing: border-box;
-    height: 439px;
-    justify-content: space-between;
-}
-
-.activite-cards img {
+.card-activite img {
     object-fit: cover;
-    width: 297.5px;
     height: 380px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -421,32 +423,36 @@ h3 {
     display: flex;
     flex-direction: column;
     box-shadow: 5px 5px 15px #F2F2F2;
-    width: 297.5px;
     height: 439px;
     border-radius: 20px;
 }
 .activite h3 {
-    padding: 20px;
+    display: flex;
     margin-top: 0;
+    justify-content: center;
+    align-items: center;
+    height: 59px;
+    text-align: center;
 }
 
 footer {
     display: flex;
+    justify-content: space-around;
     background-color:#F2F2F2;
-    padding-top: 0px;
-    margin-top: 20px;
 }
 
 .footer-info{
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
-    margin-right: 200px;
-    margin-bottom: 30px;
+    margin: 20px;
 }
 
 .footer-info a{
     margin-top: 15px;
+}
+.element-footer {
+    display: flex;
+
 }
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
